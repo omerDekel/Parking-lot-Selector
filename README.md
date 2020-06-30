@@ -3,14 +3,13 @@
    is writen to a local MongoDB data base. 
 ## Setup instructions:
 * Download the files of this repository (Images directory is not neccesery).
-* Run these instructions in the directory of the project:
+* Run these instructions in terminal from the directory of the project:
     * npm install
     * npm start
 * Open MongoDb and connect it.
 * Open Postman and send post request as follows:
-    *  url : http://localhost:3008/selector
-    *  add Header (in Headers section) of :{ key :Content-Type, value: application/json}
-    *  choose "raw" in body and enter : { "imagePath": [Path to the image]}.
+    *  url : http://localhost:3010/entries
+    *  fill the path to the image this way : { "imagePath": [Path to the image]}.
  ## Some pathes of images for the requests :
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/1.jpg?raw=true"
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/Capture.JPG?raw=true"
