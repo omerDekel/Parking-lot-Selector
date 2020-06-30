@@ -9,7 +9,7 @@ router.post('/', async function(req, res, next) {
   const decision = new Decision(licensePlateNumber,false, new Date().toLocaleString(),"");
   decision.checkVerification();
   await decision.saveToDB();
-  res.send('respond with a resource');
+  res.send("Vehicle is verified: "+decision.isVerified);
 });
 
 module.exports = router;
