@@ -3,7 +3,7 @@ const axios = require('axios');
 
 async function getLicensePlateNumber(imgUrl){
 
-    const apikey = "de2185663488957";
+    const apikey = "6a95d7362188957";
     let response = null;
     try{
         response = await axios.get("https://api.ocr.space/parse/imageurl?apikey=" + apikey + "&url=" + imgUrl)

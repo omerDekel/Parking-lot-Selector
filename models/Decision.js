@@ -5,8 +5,11 @@ class Decision{
     constructor(licensePlateNumber,isVerified,created,whyw){
         this.licensePlateNumber = licensePlateNumber;
         this.isVerified = isVerified;
+        //date of decision
         this.created = created;
+        // reason for decline
         this.whyw = whyw;
+        //data base service to save the decisions
         db = new dbService();
     }
 
@@ -19,7 +22,7 @@ class Decision{
         this.isVerified = isVerified;
     }
 
-
+    // deciding if the vehicle may enter according to some criterions 
     checkVerification(){
         
         if(!this.isPrivateVehicle()){
@@ -47,7 +50,7 @@ class Decision{
         }
 
     }
-
+    // check if it's not public transportation vehicle
     isPrivateVehicle(){
         const lastTwoDigits = this.licensePlateNumber.substring(this.licensePlateNumber.length-2);
         if(lastTwoDigits==="25" || lastTwoDigits==="26"){
@@ -55,7 +58,7 @@ class Decision{
         }
         return true;
     }
-
+    // Military & law enforcement vehicles include an alphabet letter
     isMilitaryOrLawEnforcementVehicle(){
         for(let char of this.licensePlateNumber){
             if(char < "0" || char > "9"){
@@ -65,6 +68,7 @@ class Decision{
         return false;
     }
 
+    //checks if the plat contains seven digits and prohibited Suffixes
     isSevenDigitsAllowedVehicle(){
         if(this.licensePlateNumber.length!== 7){
             return true;
