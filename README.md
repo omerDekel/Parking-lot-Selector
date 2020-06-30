@@ -7,7 +7,7 @@
     * npm install
     * npm start
 * Open Postman and send post request as follows:
-    *  url request : http://localhost:3010/entries
+    *  request url : http://localhost:3010/entries
     *  body : fill the path to the image this way : { "imagePath": [Path to the image]}.
  ## Some pathes of images for the requests :
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/1.jpg?raw=true"
