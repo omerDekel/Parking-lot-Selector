@@ -2,11 +2,10 @@
    A service written in NodeJS which gets an image of a license plate and returns a decision whether the vehicle may enter a parking lot. Each decision 
    is writen to a local MongoDB data base. 
 ## Setup instructions:
-* Download the files of this repository (Images directory is not neccesery).
-* Run these instructions in terminal from the directory of the project:
+* Download the files of this repository.
+* Run these commands in terminal from the directory of the project:
     * npm install
     * npm start
-* Open MongoDb and connect it.
 * Open Postman and send post request as follows:
     *  url request : http://localhost:3010/entries
     *  body : fill the path to the image this way : { "imagePath": [Path to the image]}.
