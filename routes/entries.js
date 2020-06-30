@@ -9,7 +9,11 @@ router.post('/', async function(req, res, next) {
   const entry = new Entry(licensePlateNumber,false, new Date().toLocaleString(),"");
   entry.checkVerification();
   await entry.saveToDB();
-  res.send("Vehicle may enter :"+entry.isVerified);
+  if(entry.isVerified){
+    res.send("The vehicle can enter ");
+  }else{
+    res.send("The vehicle can not enter ");
+  }
 });
 
 module.exports = router;
