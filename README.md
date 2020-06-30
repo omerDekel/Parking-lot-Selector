@@ -1,7 +1,6 @@
 # Parking-lot-Selector
-* A service which gets an image of a license plate and returns a decision whether the vehicle may enter a parking lot. Each decision 
-is writen to a local MongoDB data base. 
-* Written as a REST API with NodeJS .
+   A service written in NodeJS which gets an image of a license plate and returns a decision whether the vehicle may enter a parking lot. Each decision 
+   is writen to a local MongoDB data base. 
 ## Setup instructions:
 * Download the files of this repository (Images directory is not neccesery).
 * Run these instructions in the directory of the project:
