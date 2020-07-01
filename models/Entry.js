@@ -1,9 +1,10 @@
 const dbService = require('../services/dbService')
 let db = null;
-// class represent the entry to the parking lot
+//a class represents an entry to the parking lot
 class Entry{
     constructor(licensePlateNumber,isVerified,created,whyw){
         this.licensePlateNumber = licensePlateNumber;
+        //if the entry is verified or not
         this.isVerified = isVerified;
         //date of entry to the parking lot
         this.created = created;
