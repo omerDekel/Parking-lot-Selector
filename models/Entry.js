@@ -1,10 +1,12 @@
 const dbService = require('../services/dbService')
 let db = null;
-//a class represents an entry to the parking lot
+const WhywEnum = {"may_enter":0,"public_tranpost":1,"military_or_enforcment":2,
+"prohibted_seven_digs":3,"operated_by_gas":4};
+Object.freeze(WhywEnum); 
+// class represent the entry to the parking lot
 class Entry{
     constructor(licensePlateNumber,isVerified,created,whyw){
         this.licensePlateNumber = licensePlateNumber;
-        //if the entry is verified or not
         this.isVerified = isVerified;
         //date of entry to the parking lot
         this.created = created;
@@ -28,25 +30,30 @@ class Entry{
         
         if(!this.isPrivateVehicle()){
             this.whyw = "Public Transportation Vehicle";
+            this.whywId = WhywEnum.public_tranpost;
             this.isVerified = false;
         }
         
         else if(this.isMilitaryOrLawEnforcementVehicle()){
             this.whyw = "Military Or Law Enforcement Vehicle";
+            this.whywId = WhywEnum.military_or_enforcment;
             this.isVerified = false;
         }
 
         else if(!this.isSevenDigitsAllowedVehicle()){
             this.whyw = "Seven Digits Prohibited Vehicle";
+            this.whywId = WhywEnum.prohibted_seven_digs;
             this.isVerified = false;
         }
 
         else if(!this.isNotOperatedByGas()){
             this.whyw = "Operated By Gas Vehicle";
+            this.whywId = WhywEnum.operated_by_gas;
             this.isVerified = false;
         }
 
         else{
+            this.whywId = WhywEnum.may_enter;
             this.isVerified = true;
         }
 
