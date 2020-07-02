@@ -22,8 +22,8 @@
  * created - date of creation
  * whyw - desciption for decline the entry (empty if the car may enter)
  * whyid -  reprented this way:
- ** "may_enter":0
- ** "public_tranpost":1,
- ** "military_or_enforcment":2,
- ** "prohibted_seven_digs":3,
- ** "operated_by_gas":4
+   * "may_enter":0
+   * "public_tranpost":1,
+   * "military_or_enforcment":2,
+   * "prohibted_seven_digs":3,
+   * "operated_by_gas":4
