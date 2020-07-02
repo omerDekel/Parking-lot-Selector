@@ -15,3 +15,15 @@
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/13.png?raw=true"
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/9.jpeg?raw=true"
  *  "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/5.jpg?raw=true"
+ ## Data Base
+ The data of the entries is saved this way:
+ * licensePlateNumber
+ * isVerified - true or false
+ * created - date of creation
+ * whyw - desciption for decline the entry (empty if the car may enter)
+ * whyid -  reprented this way:
+ ** "may_enter":0
+ ** "public_tranpost":1,
+ ** "military_or_enforcment":2,
+ ** "prohibted_seven_digs":3,
+ ** "operated_by_gas":4
