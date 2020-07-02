@@ -9,7 +9,7 @@
 * Open Postman and send post request as follows:
     *  request url : http://localhost:3010/entries
     *  body : fill the path to the image this way : { "imagePath": [Path to the image]}.
- ## Some pathes of images for the requests :
+ ## Some paths of images for the requests :
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/1.jpg?raw=true"
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/Capture.JPG?raw=true"
  * "https://github.com/omerDekel/Parking-lot-Selector/blob/master/images/13.png?raw=true"
@@ -20,7 +20,7 @@
  * licensePlateNumber
  * isVerified - true or false
  * created - date of creation
- * whyw - desciption for decline the entry (empty if the car may enter)
+ * whyw - description for decline the entry (empty if the car may enter)
  * whyid -  reprented this way:
    * "may_enter":0
    * "public_tranpost":1,
